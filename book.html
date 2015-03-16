@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home</title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="dashboard.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
+        
+    </head>
+    <body>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Lab2</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Books <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="categories.html">Art and Architecture</a></li>
+                                <li><a href="categories.html">Biography and Memoire</a></li>
+                                <li><a href="categories.html">Business and Finance</a></li>
+                                <li><a href="categories.html">Computers</a></li>
+                                <li><a href="categories.html">Entertainment</a></li>
+                                <li><a href="categories.html">Family and Relationships</a></li>
+                                <li><a href="categories.html">Fiction and Literature</a></li>
+                                <li><a href="categories.html">Food and Drink</a></li>
+                                <li><a href="categories.html">Health and Well Being</a></li>
+                                <li><a href="categories.html">History</a></li>
+                                <li><a href="categories.html">Home and Garden</a></li>
+                                <li><a href="categories.html">Mystery and Suspence</a></li>
+                                <li><a href="categories.html">Reference and Language</a></li>
+                                <li><a href="categories.html">Religion and Spirituality</a></li>
+                                <li><a href="categories.html">Romance</a></li>
+                                <li><a href="categories.html">Science and Nature</a></li>
+                                <li><a href="categories.html">Science Fiction and Fantasy</a></li>
+                                <li><a href="categories.html">Social and Cultural Studies</a></li>
+                                <li><a href="categories.html">Sports and Fitness</a></li>
+                                <li><a href="categories.html">Travel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="padding-right: 5px;"></span>Shopping Cart <span class="badge">5</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="container">
+
+            <p style="font-size: 18px;">A Really Nice Prom Mess</p>
+            <hr>
+
+            <div class="col-md-4">
+                <img src="book_cover.jpeg" height="300" style="margin: auto; display: block;">
+            </div>
+
+            <div class="col-md-4">
+                <span style="font-size: 12px;">by Brian Sloan<span><br>
+                <span style="font-size: 13px;"><span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: green;"></span> In stock online</span>
+                <br><br>
+                <span style="font-size: 14px;">Cameron doesn''t want to go to prom. Not with his boyfriend, Shane, and definitely not with his fake date, Virginia. Sure, it''s senior prom, it''s the end of high school, and Virginia''s drop-dead gorgeous. But none of that matters to Cam, who''s never liked any high school dance. Ever. Then an…</span> <a href="">read more</a>
+            </div>
+
+            <div class="col-md-4">
+                <span style="font-size: 18px;">$12.99</span><br>
+                <button style="margin-top: 10px; background-color: #428bca; color: white;" class="btn btn-default" type="button" onclick="window.location.href='cart.html';"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="padding-right: 5px;"></span> Add to Cart</button>
+            </div>
+
+            <div style="clear:both;"></div>
+            <br>
+
+            <div id="others" style="text-align: center;">
+                <h4>– Others also Looked at –</h4>
+                <br>
+                <div class="row-same-height">
+                    <div class="col-md-3 col-xs-height arrow">
+                        <a href=""><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="col-md-2 col-xs-height book">
+                        <img src="book_cover.jpeg">
+                        <a href="#"><h4>AppleWorks 6</h4></a>
+                        <h5>by <a href="#">Author</a></h5>
+                        <h5>$10.99</h5>
+                    </div>
+                    <div class="col-md-2 col-xs-height book">
+                        <img src="book_cover.jpeg">
+                        <a href="#"><h4>AppleWorks 6</h4></a>
+                        <h5>by <a href="#">Author</a></h5>
+                        <h5>$10.99</h5>
+                    </div>
+                    <div class="col-md-2 col-xs-height book">
+                        <img src="book_cover.jpeg">
+                        <a href="#"><h4>AppleWorks 6</h4></a>
+                        <h5>by <a href="#">Author</a></h5>
+                        <h5>$10.99</h5>
+                    </div>
+                    <div class="col-md-3 col-xs-height arrow">
+                        <a href=""><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
