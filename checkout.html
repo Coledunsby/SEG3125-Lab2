@@ -12,33 +12,6 @@
 
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
 
-    <script type="text/javascript">
-        function showGeneralSection() {
-            $('#collapseOne').collapse('show');
-            $('#collapseTwo').collapse('hide');
-        }
-        function showDeliverySection() {
-            $('#collapseOne').collapse('hide');
-            $('#collapseTwo').collapse('show');
-        }
-        function showDeliverySectionBack() {
-            $('#collapseThree').collapse('hide');
-            $('#collapseTwo').collapse('show');
-        }
-        function showShippingSection() {
-            $('#collapseTwo').collapse('hide');
-            $('#collapseThree').collapse('show');
-        }
-        function showShippingSectionBack() {
-            $('#collapseFour').collapse('hide');
-            $('#collapseThree').collapse('show');
-        }
-        function showPaymentSection() {
-            $('#collapseThree').collapse('hide');
-            $('#collapseFour').collapse('show');
-        }
-    </script>
-
 </head>
 <body>
 
@@ -51,12 +24,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Lab2</a>
+                <a class="navbar-brand" href="index.html">SEG3125 Lab 2</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="index.html">Home</a></li>
-                    <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Books <span class="caret"></span></a>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Books <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="categories.html">Art and Architecture</a></li>
                             <li><a href="categories.html">Biography and Memoire</a></li>
@@ -82,7 +55,7 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="padding-right: 5px;"></span>Shopping Cart <span class="badge">5</span></a></li>
+                    <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="padding-right: 5px;"></span>Shopping Cart <span class="badge">2</span></a></li>
                 </ul>
             </div>
         </div>
@@ -97,28 +70,31 @@
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                         <div class="panel-body">
-                            <form class="form-horizontal">
+                            <form role="form" data-toggle="validator" id="general_form" class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="inputFirstName" class="col-sm-3 control-label">First Name</label>
+                                    <label for="inputFirstName" class="col-sm-3 control-label">* First Name</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="inputFirstName">
+                                        <input type="text" class="form-control" id="inputFirstName" required>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputLastName" class="col-sm-3 control-label">Last Name</label>
+                                    <label for="inputLastName" class="col-sm-3 control-label">* Last Name</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="inputLastName">
+                                        <input type="text" class="form-control" id="inputLastName" required>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputEmail" class="col-sm-3 control-label">Email</label>
+                                    <label for="inputEmail" class="col-sm-3 control-label">* Email</label>
                                     <div class="col-sm-9">
-                                        <input type="email" class="form-control" id="inputEmail">
+                                        <input type="email" class="form-control" id="inputEmail" required>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-3 col-sm-9">
-                                        <input type="button" value="Next" class="btn btn-default" onclick="showDeliverySection();">
+                                        <button type="submit" class="btn btn-default">Next</button>
                                     </div>
                                 </div>
                             </form>
@@ -131,9 +107,9 @@
                     </div>
                     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                         <div class="panel-body">
-                            <form class="form-horizontal">
+                            <form role="form" data-toggle="validator" id="delivery_form" class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="inputCountry" class="col-sm-3 control-label">Country</label>
+                                    <label for="inputCountry" class="col-sm-3 control-label">* Country</label>
                                     <div class="col-sm-9">
                                         <select class="form-control">
                                             <option>Canada</option>
@@ -141,11 +117,13 @@
                                             <option>Other</option>
                                         </select>
                                     </div>
+                                    <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputStreetAddress1" class="col-sm-3 control-label">Street Address 1</label>
+                                    <label for="inputStreetAddress1" class="col-sm-3 control-label">* Street Address 1</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="inputStreetAddress1">
+                                        <input type="text" class="form-control" id="inputStreetAddress1" required>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -155,13 +133,14 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputCity" class="col-sm-3 control-label">City</label>
+                                    <label for="inputCity" class="col-sm-3 control-label">* City</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="inputCity">
+                                        <input type="text" class="form-control" id="inputCity" required>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputProvince" class="col-sm-3 control-label">Province</label>
+                                    <label for="inputProvince" class="col-sm-3 control-label">* Province</label>
                                     <div class="col-sm-9">
                                         <select class="form-control">
                                             <option>Ontario</option>
@@ -179,17 +158,19 @@
                                             <option>Nunavut</option>
                                         </select>
                                     </div>
+                                    <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputPostalCode" class="col-sm-3 control-label">Postal Code</label>
+                                    <label for="inputPostalCode" class="col-sm-3 control-label">* Postal Code</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="inputPostalCode">
+                                        <input type="text" class="form-control" id="inputPostalCode" required>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-3 col-sm-9">
                                         <input type="button" value="Back" class="btn btn-default" onclick="showGeneralSection();">
-                                        <input type="button" value="Next" class="btn btn-default" onclick="showShippingSection();">
+                                        <button type="submit" class="btn btn-default">Next</button>
                                     </div>
                                 </div>
                             </form>
@@ -202,11 +183,36 @@
                     </div>
                     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                         <div class="panel-body">
-                            <form class="form-horizontal">
+                            <form role="form" data-toggle="validator" id="shipping_form" class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-sm-9">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="shipping" required>
+                                                <b>NextDay Delivery ($15.99):</b> <br>
+                                                Delivered on Mar 24, 2015
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="shipping" required>
+                                                <b>Premium Shipping ($10.99):</b> <br>
+                                                Delivered by Mar 27, 2015
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="shipping" checked="checked" required>
+                                                <b>Standard Shipping ($5.99):</b> <br>
+                                                Delivered by Mar 27, 2015
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-3 col-sm-9">
                                         <input type="button" value="Back" class="btn btn-default" onclick="showDeliverySectionBack();">
-                                        <input type="button" value="Next" class="btn btn-default" onclick="showPaymentSection();">
+                                        <button type="submit" class="btn btn-default">Next</button>
                                     </div>
                                 </div>
                             </form>
@@ -219,11 +225,80 @@
                     </div>
                     <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                         <div class="panel-body">
-                            <form class="form-horizontal">
+                            <form role="form" data-toggle="validator" id="payment_form" class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="inputCardType" class="col-sm-3 control-label">* Card Type</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control">
+                                            <option>MasterCard</option>
+                                            <option>American Express</option>
+                                            <option>Visa</option>
+                                        </select>
+                                    </div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputCardNumber" class="col-sm-3 control-label">* Card Number</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="inputCardNumber" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputExpiryDate" class="col-sm-3 control-label">* Expiry</label>
+                                    <div class="col-sm-4">
+                                        <select class="form-control">
+                                            <option>mm</option>
+                                            <option>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                            <option>04</option>
+                                            <option>05</option>
+                                            <option>06</option>
+                                            <option>07</option>
+                                            <option>08</option>
+                                            <option>09</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <select class="form-control">
+                                            <option>yyyy</option>
+                                            <option>2015</option>
+                                            <option>2016</option>
+                                            <option>2017</option>
+                                            <option>2018</option>
+                                            <option>2019</option>
+                                            <option>2020</option>
+                                            <option>2021</option>
+                                            <option>2022</option>
+                                            <option>2023</option>
+                                            <option>2024</option>
+                                            <option>2025</option>
+                                        </select>
+                                    </div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputSecurityCode" class="col-sm-3 control-label">* Security Code</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="inputSecurityCode" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputNameOnCard" class="col-sm-3 control-label">* Name on Card</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="inputNameOnCard" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-3 col-sm-9">
                                         <input type="button" value="Back" class="btn btn-default" onclick="showShippingSectionBack();">
-                                        <button style="background-color: #428bca; color: white;" class="btn btn-default" type="button"><span class="glyphicon glyphicon-credit-card" aria-hidden="true" style="padding-right: 5px;"></span> Place Order</button>
+                                        <button type="submit" style="background-color: #428bca; color: white;" class="btn btn-default"><span class="glyphicon glyphicon-credit-card" aria-hidden="true" style="padding-right: 5px;"></span> Place Order</button>
                                     </div>
                                 </div>
                             </form>
@@ -263,7 +338,42 @@
                     </tr>
                 </thead>
                 <tbody>
-
+                    <tr>
+                        <table>
+                            <tr>
+                                <td rowspan="4" style="padding: 2px; padding-top: 5px;"><img style="max-height: 80px;" src="images/search_results_1.jpg"></td>
+                                <td style="text-align: left; padding: 2px; padding-top: 5px;"><b>A Really Nice Prom Mess</b></td>
+                                <td style="text-align: right; padding: 2px; padding-top: 5px;">$12.99</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left; padding: 2px;">Trade Paperback</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left; padding: 2px;">Qty 1</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left; padding: 2px; padding-bottom: 5px;">Delivered by Mar 27, 2015</td>
+                            </tr>
+                        </table>
+                    </tr>
+                    <tr>
+                        <table>
+                            <tr style="border-top: 1px solid #DDD;">
+                                <td rowspan="4" style="padding: 2px; padding-top: 5px;"><img style="max-height: 80px;" src="images/index_top_picks_1.jpg"></td>
+                                <td style="text-align: left; padding: 2px; padding-top: 5px;"><b>To Kill A Mockingbird</b></td>
+                                <td style="text-align: right; padding: 2px; padding-top: 5px;">$15.96</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left; padding: 2px;">Trade Paperback</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left; padding: 2px;">Qty 1</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left; padding: 2px;">Delivered by Mar 27, 2015</td>
+                            </tr>
+                        </table>
+                    </tr>
                 </tbody>
             </table>
 
@@ -273,6 +383,61 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="js/validator.js"></script>
+
+    <script type="text/javascript">
+        $('#general_form').validator().on('submit', function (e) {
+            if (!e.isDefaultPrevented()) {
+                e.preventDefault();
+                showDeliverySection();
+            }
+        })
+
+        $('#delivery_form').validator().on('submit', function (e) {
+            if (!e.isDefaultPrevented()) {
+                e.preventDefault();
+                showShippingSection();
+            }
+        })
+
+        $('#shipping_form').validator().on('submit', function (e) {
+            if (!e.isDefaultPrevented()) {
+                e.preventDefault();
+                showPaymentSection();
+            }
+        })
+
+        $('#payment_form').validator().on('submit', function (e) {
+            if (!e.isDefaultPrevented()) {
+                e.preventDefault();
+            }
+        })
+
+        function showGeneralSection() {
+            $('#collapseOne').collapse('show');
+            $('#collapseTwo').collapse('hide');
+        }
+        function showDeliverySection() {
+            $('#collapseOne').collapse('hide');
+            $('#collapseTwo').collapse('show');
+        }
+        function showDeliverySectionBack() {
+            $('#collapseThree').collapse('hide');
+            $('#collapseTwo').collapse('show');
+        }
+        function showShippingSection() {
+            $('#collapseTwo').collapse('hide');
+            $('#collapseThree').collapse('show');
+        }
+        function showShippingSectionBack() {
+            $('#collapseFour').collapse('hide');
+            $('#collapseThree').collapse('show');
+        }
+        function showPaymentSection() {
+            $('#collapseThree').collapse('hide');
+            $('#collapseFour').collapse('show');
+        }
+    </script>
 
 </body>
 </html>

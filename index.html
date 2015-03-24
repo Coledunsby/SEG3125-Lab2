@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
 
         <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
-        
+
     </head>
     <body>
 
@@ -25,7 +25,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Lab2</a>
+                    <a class="navbar-brand" href="index.html">SEG3125 Lab 2</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -56,13 +56,13 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="padding-right: 5px;"></span>Shopping Cart <span class="badge">5</span></a></li>
+                        <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="padding-right: 5px;"></span>Shopping Cart <span class="badge">2</span></a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <div class="container-fluid">
+        <div class="container-fluid" style="margin-bottom: 50px;">
 
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar">
@@ -80,11 +80,11 @@
                     <input type="text" class="form-control" placeholder="Search for...">
                     <span class="input-group-btn">
 
-                        <button type="button" class="btn btn-default dropdown-toggle" style="border-radius: 0;" data-toggle="dropdown" aria-expanded="false">Search By <b>Title</b> <span class="caret"></span></button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Title</a></li>
-                            <li><a href="#">Keyword</a></li>
-                            <li><a href="#">Author</a></li>
+                        <button id="searchByText" type="button" class="btn btn-default dropdown-toggle" style="border-radius: 0;" data-toggle="dropdown" aria-expanded="false">Search By <b>Title</b> <span class="caret"></span></button>
+                        <ul class="dropdown-menu" id="searchBy" role="menu">
+                            <li><a href="#Title">Title</a></li>
+                            <li><a href="#Keyword">Keyword</a></li>
+                            <li><a href="#Author">Author</a></li>
                         </ul>
 
                         <button class="btn btn-default" type="button" onclick="window.location.href='search.html';">Search</button>
@@ -222,6 +222,31 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+            $(".container-fluid .nav a").click(function(event) {
+                event.preventDefault();
+
+                // Animate scroll
+                var id = "#" + this.href.split("#")[1];
+
+                $('html, body').animate({
+                    scrollTop: $(id).offset().top - 70
+                }, 'fast');
+
+                // Change selected tab
+                $(".sidebar .active").removeClass("active");
+                var parent = $(this).parent().addClass("active");
+            });
+
+            $("#searchBy a").click(function(event) {
+                event.preventDefault();
+
+                var id = this.href.split("#")[1];
+
+                $("#searchByText").html("Search By <b>" + id + "</b> <span class='caret'></span>");
+            });
+        </script>
 
     </body>
 </html>
